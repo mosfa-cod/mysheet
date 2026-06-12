@@ -17,7 +17,7 @@ let score = 0;
 let studentName = "";
 
 // ⚠️ ضع رابط تطبيق الويب (Web App URL) المستخرج من النشر الجديد لسكريبت جوجل هنا:
-const webAppUrl = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL"; 
+const webAppUrl = "https://script.google.com/macros/s/AKfycbwWavpID7mIVqaGedRpPDUITXRZlCKvKdr-Pvsl9LeW15GoOnP9EMsOUKEjiDBAzwL2/exec"; 
 
 const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
