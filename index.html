@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاختبار التفاعلي المطور</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. شاشة البداية وتسجيل الاسم -->
+        <div id="start-screen" class="card">
+            <h1 class="main-title">مرحباً بك في الاختبار التفاعلي المطور</h1>
+            <p class="subtitle">يرجى كتابة اسمك الثلاثي لبدء التحدي:</p>
+            <input type="text" id="student-name" placeholder="مصطفى عبد العال دحروج" required>
+            <button id="start-btn" class="btn">
+                <span>بدء الاختبار والتعلم 📝</span>
+            </button>
+        </div>
+
+        <!-- 2. شاشة عرض الأسئلة -->
+        <div id="quiz-screen" class="card hidden">
+            <div class="quiz-header">
+                <span id="progress">السؤال 1 من 3</span>
+                <span id="timer">الوقت: 00:00</span>
+            </div>
+            <h2 id="question-text">هنا سيظهر نص السؤال؟</h2>
+            <div id="options-container" class="options-grid">
+                <!-- الخيارات سيتم إنشاؤها تلقائياً بواسطة الجافا سكريبت -->
+            </div>
+            <button id="next-btn" class="btn hidden">السؤال التالي ⬅️</button>
+        </div>
+
+        <!-- 3. شاشة النتيجة والنهاية -->
+        <div id="result-screen" class="card hidden">
+            <h2 class="result-title">تهانينا، لقد أتممت الاختبار!</h2>
+            <p class="student-display">الطالب: <span id="display-name"></span></p>
+            <div class="score-box">
+                <p>درجتك هي:</p>
+                <span id="final-score">0</span> / <span id="total-questions">0</span>
+            </div>
+            <p id="upload-status" class="status-message">جاري إرسال نتيجتك إلى جدول البيانات...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
