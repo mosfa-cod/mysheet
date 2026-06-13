@@ -17,7 +17,8 @@ let score = 0;
 let studentName = "";
 
 // ⚠️ ضع رابط تطبيق الويب (Web App URL) المستخرج من النشر الجديد لسكريبت جوجل هنا:
-const webAppUrl = "https://script.google.com/macros/s/AKfycbwWavpID7mIVqaGedRpPDUITXRZlCKvKdr-Pvsl9LeW15GoOnP9EMsOUKEjiDBAzwL2/exec"; 
+const webAppUrl = "https://script.google.com/macros/s/AKfycbxuGdnzWiBp-tWN-x5fHHoJf7628b1kpeFX8VIGOsVqwDLLvDizygU0Tzqu-YyHqRHJ/exec"; 
+const subjectName = "النتائج";
 
 const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
@@ -94,9 +95,10 @@ function showResults() {
     document.getElementById('total-questions').innerText = quizData.length;
 
     // صياغة حقول البيانات المحدثة المتوافقة مع السكريبت والشيت
-    const payload = {
+     const payload = {
         studentName: studentName,
-        studentScore: `${score} / ${quizData.length}`
+        studentScore: `${score} / ${quizData.length}`,
+        subjectName: subjectName
     };
 
     fetch(webAppUrl, {
